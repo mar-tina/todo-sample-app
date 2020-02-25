@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
     filename: "index.js"
   },
-  mode: "production",
+  mode: "development",
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html"
