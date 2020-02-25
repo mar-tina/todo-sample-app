@@ -5,10 +5,10 @@ const webpack = require("webpack");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, ""),
     filename: "index.js"
   },
-  mode: "development",
+  mode: "production",
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html"
