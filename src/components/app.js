@@ -1,7 +1,9 @@
 import { html, createShadowElement } from "shadow-render";
-import { mainContainer } from "./appStyle.js";
+import { mainContainer, logTodoContainer, todoListHolder } from "./appStyle.js";
 import "./todolist.js";
 import "./todo.js";
+import "./logger.js";
+import "./header.js";
 
 let Myapp = createShadowElement({
   lifecycle: {
@@ -12,10 +14,14 @@ let Myapp = createShadowElement({
 
   template: ctx => {
     return html(`
+        <header-el> </header-el>
         <div style="${mainContainer}">
           <p> TODOS </p>
           <todo-el> </todo-el>
-          <todo-list> </todo-list>
+          <div style="${logTodoContainer}">
+            <todo-list> </todo-list>
+            <log-todo> </log-todo>
+          </div>
         </div>`);
   }
 });
